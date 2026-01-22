@@ -1,0 +1,439 @@
+
+/********************* NOTES ************************
+The basic resets below allow you to create your own styling
+without having to fight some of the most annoying built in 
+agent user styles.
+****************************************************/
+
+/************* Basic Resets ***************/
+
+h1, h2, h3, h4, p, ul, ol, blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul, nav ol {
+	list-style-type: none;
+}
+
+/******** Additional resets *********/
+a { text-decoration:none; }
+
+img {
+	display: block;
+	max-width:100%; 
+	height: auto;
+}
+
+* { box-sizing: border-box; }
+
+/************ End CSS Reset  *************/
+
+
+/********************* NOTES ************************
+Below are the only colors I have used. Choose four new
+colors and do a find and replace to replace the hex codes.
+****************************************************/
+
+
+/*********** Colors ***********
+
+primary = #1e3a8a; (professional blue)
+secondary = #f8fafc; (light background)
+accent = #3b82f6; (bright blue)
+text default = #1e293b; (slate)
+
+
+********************************/
+
+
+/************* Basic Page Rules ************/
+
+
+/********************* NOTES ************************
+I set the background of the page to dark and the main
+font to Georgia for most of the type. The header font
+is set to Arial. You could get two fonts that work well
+together and replace these choices. You may have to adjust
+sizing and spacing as well.
+****************************************************/
+
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	color: #1e293b;
+	background: #f1f5f9;
+	line-height: 1.6;
+}
+
+/************* typography ************/
+
+h1, h2, h3, h4, nav { 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+}
+
+h1 {
+	font-size: 2.5em;
+	margin-bottom: 0.5em;
+	color: #ffffff;
+}
+
+h2 {
+	font-size: 2em;
+	margin-bottom: 1em;
+	color: #1e293b;
+}
+
+h3 { 
+	font-size: 1.4em;
+	margin-bottom: 0.75em;
+	color: #334155;
+}
+
+h4 { 
+	font-size: 1.1em;
+	margin-bottom: 0.5em;
+	color: #475569;
+	font-weight: 600;
+}
+	
+
+p {
+	line-height: 1.7;
+	margin-bottom: 1.2em;
+	color: #475569;
+}
+
+a { 
+	color: #3b82f6;
+	transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+	color: #1e3a8a;
+}
+
+.social { font-size:175%; }
+
+.centered { text-align:center; }
+
+/****************** Grid ******************/
+
+.primary { 
+	background: #1e3a8a;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.secondary { 
+	background: #ffffff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	margin: 40px 20px;
+}
+
+
+/****************** Header and Main Navigation ****************/
+
+header {
+	padding: 40px 20px;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+header .wrapper {
+	display: flex;
+	flex-direction: column-reverse;
+	flex-wrap: wrap;
+}
+
+.logo-container {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}
+
+#logo {
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#logo:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+#mainnav {
+	margin-bottom: 20px;
+}
+
+#mainnav ul {
+	display: flex;
+	justify-content: center;
+}
+
+#mainnav ul li a {
+	display: block;
+	color: #ffffff;
+	border-left: 2px solid rgba(255, 255, 255, 0.3);
+	padding: 10px 24px;
+	font-size: 16px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+#mainnav ul li a:hover {
+	color: #93c5fd;
+	border-left-color: #93c5fd;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+/********************* NOTES ************************
+Removes the border on the first link...
+****************************************************/
+
+#mainnav ul li:first-of-type a {
+	border:none;
+}
+
+
+/***************** Section Specific Rules *****************/
+
+#work {
+	background: #ffffff;
+	padding: 80px 20px;
+	box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#work h2 {
+	text-align: center;
+	color: #1e3a8a;
+	font-size: 2.5em;
+	margin-bottom: 60px;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+#work h2::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 4px;
+	background: #3b82f6;
+	border-radius: 2px;
+}
+
+#work img, .additional-projects img {
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#work img:hover, .additional-projects img:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.featured, .projects, #page-template #work section {
+	margin-bottom: 60px;
+}
+
+.projects article {
+	padding: 20px;
+	background: #f8fafc;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects article:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projects article h3 {
+	color: #1e3a8a;
+}
+
+.projects article strong {
+	color: #1e3a8a;
+	font-weight: 600;
+}
+
+#about-contact, .additional-projects {
+	padding: 60px 40px;
+}
+
+#about-contact h2 {
+	color: #1e3a8a;
+	margin-bottom: 1.5em;
+}
+
+#about-contact h3 {
+	color: #1e3a8a;
+	margin-top: 1.5em;
+}
+
+#about-contact img {
+	margin-bottom: 20px;
+	border-radius: 50%;
+	box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+	border: 4px solid #ffffff;
+	transition: transform 0.3s ease;
+}
+
+#about-contact img:hover {
+	transform: scale(1.05);
+}
+
+/********************* NOTES ************************
+I added all this margin to the bottom of the footer so
+that when you click the link for "about" or "contact" in
+the main nav, there is room for them to go all the way to
+the top of the page.
+****************************************************/
+
+footer {
+	padding: 40px 20px;
+	margin-bottom: 600px;
+	text-align: center;
+}
+
+footer p {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+.social a {
+	display: inline-block;
+	margin: 0 12px;
+	color: #3b82f6;
+	padding: 8px;
+	border-radius: 8px;
+	background: #f8fafc;
+	transition: all 0.3s ease;
+}
+
+.social a:hover {
+	color: #ffffff;
+	background: #1e3a8a;
+	transform: translateY(-4px);
+	box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+@media only screen and (min-width: 650px) {
+	#work {
+		padding: 20px 10px;
+	}
+	
+	#work article, h2 {
+		padding: 0 10px;
+	}
+	
+	.projects, #page-template #work section  {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.projects article, #page-template #work section article {
+		width: 50%;
+	}
+	
+	.additional-projects .wrapper{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.additional-projects h2 {
+		flex-basis: 100%;
+	}
+	
+	.additional-projects article {
+		width: 50%;
+		padding: 0 10px;
+	}
+	
+	#about-contact {
+		padding: 0;
+	}
+	
+	#about-contact .wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		padding: 20px 10px;
+	}
+	
+	#about-contact .profile-photo {
+		flex: 1;
+		padding: 0 10px;
+		width: 100%;
+	}
+	
+	#about-contact article {
+		padding: 0 10px;
+	}
+	
+	#about-contact article:first-of-type {
+		flex: 2;
+	}
+	
+	#about-contact article:last-of-type {
+		flex-basis: 100%;
+	}
+	
+}
+
+@media only screen and (min-width: 768px) {
+	
+	.featured {
+		display: flex;
+	}
+	
+	.featured article {
+		flex: 1;
+	}
+	
+	.additional-projects article {
+		width: 25%;
+	}
+	
+	#about-contact .wrapper {
+		flex-wrap: nowrap;
+	}
+	
+	#about-contact article:last-of-type {
+		flex: 2;
+		flex-basis: 0;
+	}
+}
+
+@media only screen and (min-width: 1040px) {
+	.wrapper {
+		width: 1020px;
+		margin: auto;
+	}
+	
+	header .wrapper {
+		padding: 0 10px;
+	}
+	
+	/*Change the width here to 33% if you want three articles in a row*/
+	.projects article {
+		width: 25%;
+	}
+}
